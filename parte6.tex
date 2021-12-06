@@ -1,0 +1,26 @@
+\begin{enumerate}
+    \item Sea $(X_1,Y_1),(X_2,Y_2),...,(X_n,Y_n)$  una muestra aleatoria de una población normal bivariada con $EX=\mu_1 , EY=\mu_2 , var(X)=var(Y)=\sigma^2$ y $cov(X,Y)=\rho\sigma^2$. Sea $\bar{X} , \bar{Y}$ las medias muestrales correspondientes;  $S^2_1,S^2_2$ las varianzas correspondientes y $S_{11}$ la covarianza muestral. Escribe $R=2S_{11}/(S^2_1+S^2_2)$ . \\ 
+    Demuestre que la función de densidad de R esta dado por: 
+   
+    $$ f(r)=\frac{\Gamma(n/2)}{\sqrt{\pi}\Gamma[(n-1)/2]}(1-\rho^2)^{(n-1)/2}
+    (1-\rho r)^{-(n-1)}(1-r^2)^{(n-3)/2},    |r|<1 $$
+    
+    [pista: sea $U=(X+Y)/2 , V=(X-Y)/2$ observe que el vector aleatorio (U,V) tambien es normal bivariante. De hecho U y V son independientes]
+     \\ 
+     \textbf{Solución: en la parte final}
+     \\ 
+    \item Sea $X,Y$ variables aleatorias normales independientes. Una muestra de $n=11$ observaciones en $(X,Y)$ produce un coeficiente de correlación muestral $r=0.40$. Ecuentre la probabilidad de obtener un valor de R que exceda el valor esperado.
+    
+     \\ 
+     \\ 
+    
+    \item Sean $X_1,X_2$ conjuntamente distribuidas normalmente con medias cero, varianzas unitarias y coeficiente de correlación $\rho$. Sea $S\sim \chi^2(n)$ variable aleatoria que es independiente de $(X_1,X_2)$ Entonces la distribución conjunta de $Y_1=X_1/\sqrt{S/n}$ y $Y_2=X_2/\sqrt{S/n}$ se conoce como distribución t bivariada central. Encuentre la función de densidad conjunta de $(Y_1,Y_2)$ y las densidades marginales de $Y_1,Y_2$ respectivamente.
+    
+     \\ 
+     \\ 
+    
+     \item Sea $(X_1,Y_1),(X_2,Y_2),...,(X_n,Y_n)$ una muestra de una distribución normal bivariada con parámetros $EX_1=\mu_1 , EY_1=\mu_2 , var(X_i)=var(Y_i)=\sigma^2$ y $cov(X_i,Y_i)=\rho\sigma^2. i=1,2,...,n$. Encuentre la distribución estadística:
+    
+    $$T(X,Y)=\sqrt{n}\frac{(\bar{X}-\mu_1)-(\bar{Y}-\mu_2)}{\sqrt{\sum_{i=1}^{n}(X_i-Y_i-\bar{X}+\bar{Y})^2}}$$
+    
+\end{enumerate}

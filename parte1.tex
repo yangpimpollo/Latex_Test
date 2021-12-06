@@ -1,0 +1,70 @@
+\begin{enumerate}
+\setcounter{enumi}{33}
+     \item Sea $X,Y$ variables aleatorias independientes con distribución uniforme en $[\theta - 1/2,\theta + 1/2]$  donde $\theta \in \mathbb{R}$ . Probar que la distribución $X-Y$ no depende de $\theta$, encontrando su densidad.
+     \\
+     \textbf{Solución:}
+     \\
+     $\rightarrow [\theta - 1/2,\theta + 1/2] = [a,b];~~ b-a=1$\\
+     $X,Y$ independientes entonces $f_{X,Y}(x,y)=f_X(x)*f_Y(y)$ 
+     $$ f_{X,Y}(x,y)=(\frac{1}{b-a})(\frac{1}{b-a})= \left\lbrace\begin{array}{c} 1~~~~~si~x,y~\in ~(a,b)*(a,b)\\ 0~~~~~~~~~~~~~~~~~~~~~~otro~caso \end{array}\right.
+     $$
+     \\
+     $$f_{X-Y}(u)=\int_{-\infty}^{\infty} 1 dv =f_{X,Y}(u+v,v)dv~~;~~~~~J=\begin{vmatrix}
+    1 & 1\\0 & 1\end{vmatrix}=1~;~~~u \in~[-1,1]
+     $$\\
+     $f_X(u+v)=1~~~~si~~a<u+v<b~~~\rightarrow ~~ a-u<v<b-u\\
+     f_Y(v)=1~~~~si~~a<v<b$
+     $$
+     f_{X-Y}(u)=\int_{\max(a,a-u)}^{\min(b,b-u)} 1 dv=\min(b,b-u)-\max(a,a-u)
+     $$
+     
+     $$f_{X-Y}(u)=\left\lbrace\begin{array}{c} 1-|u|~~~~~si~u~\in ~[-1,1]\\ 0~~~~~~~~~~~~otro~caso\end{array}\right.;~~~ f_{X-Y}~~no~depende~de~\theta
+     $$
+     
+     
+     \item Sea $X_1,…,X_n$  variables aleatorias independientes con densidad común de Rayleigh con parametro $\theta>0$:
+     $$f(x)=\left\lbrace\begin{array}{c}\frac{x}{\theta^2}\exp{(- \frac{x^2}{2\theta^2})}~~~~x>0\\
+     0~~~~~~~~~~~~~~~~~~~~x\leq 0
+     \end{array}\right.
+     $$
+    \begin{enumerate}
+        \item determine la densidad conjunta de $Y_1,…,Y_n$  donde $Y_i=X_i^2$
+        \item cual es la distribución de $U=minX_i$  , como se llama esa distribución.
+        \item calcular las distribución de $Z=X_1/X_2$
+    \end{enumerate}
+    \\
+    \textbf{Solución:}
+    \begin{enumerate}
+        \item $x_i>0~~~~~~~~Y_i=\phi(X_i)=X_i^2~~~~~~~~x_i=\phi'(y_i)=\sqrt{y_i}$
+        $$\dfrac {\mathrm{d} \phi'(y_i)}{\mathrm{d} y_i}=\frac{1}{2\sqrt{y_i}}~~~~~;~~~~~Y_i \in \mathbb R^+~~~~~;~~~~~$$
+        $$f_{Y_i}(y_i)=f_{X_i}(\phi'(y_i))|\dfrac {\mathrm{d} \phi'(y_i)}{\mathrm{d} y_i}|=\frac{1}{2\theta^2}\exp{(-\frac{1}{2\theta^2}y_i)}$$
+        $$
+        Y_i\thicksim Exp(\frac{1}{2\theta^2})~~~~ \rightarrow ~~~~$$
+        $$f_Y(y)=\prod_{i=1}^{n}f_{Y_i}(y_i)=\lambda^n\exp{(-\lambda\sum_{i=1}^{n}y_i)} ~~~y \in \mathbb R^n ~~~\lambda=\frac{1}{2\theta^2}>0
+        $$
+        
+        \\
+        \\
+        \\
+        \item $U=minX_i$ es una Distribución del mínimo de una muestra donde su CDF seria la siguiente:
+        $$F_U(u)=1-[1-F_X(u)]^n
+        $$
+        $~~~~\to~~el~CDF~de~la~distribucion ~Rayleigh~es:$
+        $$F_X(u)=1-exp(- \frac{u^2}{2 \theta ^2})=1-[1-(1-exp(- \frac{u^2}{2 \theta ^2}))]^n=1-exp(- \frac{u^2}{2 (\frac{\theta}{\sqrt{n}} )^2})
+        $$
+        $$~~~~ \therefore ~~~~ U\thicksim Rayleigh(\frac{\theta}{\sqrt{n}})
+        $$
+        
+        
+        \item hallar $Z=X_1/X_2$
+        
+        $$Z=f_{X_1/X_2}(z)=\int_{0}^{\infty }f_{X_1,X_2}(zw,w)|w|dw;~~~~~J=\begin{vmatrix}w & w\\0 & 1\end{vmatrix}=w~;~~~w>0$$
+        $$f(z)=\int_{0}^{\infty }\frac{zw^3}{\theta^4}exp(-w^2(\frac{z^2+1}{2\theta^2}))dw~~~;~~~~~m=\frac{z}{\theta^4}~~~;~~~~~n=\frac{z^2+1}{2\theta^2}
+        $$
+        $$\rightarrow \int_{0}^{\infty }mw^3exp(-nw^2)dw=\frac{m}{2n^2}\to f_Z(z)=\frac{2\theta^2z}{(z^2+1)^2} ~~~;~~~~~z>0
+        $$
+        
+    \end{enumerate}
+     
+     
+\end{enumerate}

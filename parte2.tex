@@ -1,0 +1,38 @@
+\begin{enumerate}
+\setcounter{enumi}{36}
+     \item Sea $X$ una variable aleatorias cuya función de distribución $F$ es una función continua en linea recta. Demuestre que la distribución $Y=F(X)$  es $U[0,1]$.(sugerencia:Demuestre primero en el caso de $F$ estrictamente creciente. Tenga en cuenta que no es suficiente probar en el caso absolutamente continuo;tambien se cumple cuando $F$ es la función de Cantor)
+     \\
+    \textbf{Solución:}
+     $$Y=F(X)\sim U[0,1]~~~~~~Y=F(X)=P(X\le x)\in [0,1]    $$
+     $como~ F(y)=(y-a)/(b-a)~para ~ y\in [a,b] $
+     $$
+P(Y\le 0)=P(F(x)\le 0)=P(P(X\le x)\le 0)=0$$$$
+P(Y\le 1)=P(F(x)\le 1)=P(P(X\le x)\le 1)=1$$$$
+P(Y\le y)=P(F(x)\le F(y))$$$$P(\int_{-\infty }^{x}f_x(t)dt-\int_{-\infty }^{y}f_x(t)dt)\le 0)=P(X\le y)=F(y)=y$$
+     $$F_Y(y)=P(Y\le y)=\left\lbrace\begin{array}{c}
+0 ~~~~~~ si~ y< 0~~~~~~\\ 
+y ~~~~~~ si~ 0\le  y \le 1~~~~~~\\ 
+1 ~~~~~~ si~ y>1~~~~~~\\ 
+ \end{array}\right.$$
+
+     
+     \item .
+     \begin{enumerate}
+        \item Las variables $X,Y~y~Z$ son independientes, cada una distribuida uniformemente en el intervalo $[0,1]$.  Determinar $P(X<Y<Z)$  y $P(X\leq Y\leq Z)$.
+        \item Las variables $X,Y~y~Z$ son independientes e idénticamente distribuidos, y la función de distribución común $F$ es continua cual es $P(X<Y<Z)$  justifique su respuesta. (sugerencia:ejercicio anterior)
+    \end{enumerate}
+    \\
+    \textbf{Solución:}
+    \begin{enumerate}
+        \item $~~~~~U\thicksim U[0,1]~~~~~\to~~~~~f_U(u)=1~;~~~ u \in [0,1] $\\
+        $$P(X<Y<Z) = P(X\leq Y\leq Z)$$
+        $$\int_{0}^{1}\int_{0}^{z}\int_{0}^{y}1.dxdydz=\int_{0}^{1}\int_{0}^{z}y.dydz=\int_{0}^{1}\frac{z^2}{2}dz=\frac{1}{6}
+        $$
+        \item
+        $$P(x<y<z)=P(x<y , y<z , x<z)=P(x<y)P(y<z)P(x<z)$$
+    \end{enumerate}
+\end{enumerate}
+\newpage
+
+
+

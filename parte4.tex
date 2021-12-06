@@ -1,0 +1,123 @@
+\begin{enumerate}
+\setcounter{enumi}{56}
+    \item .
+     \begin{enumerate}
+        \item Si $X~e~Y$  tienen densidad conjunta $f(x,y)$, encuentre la densidad conjunta de $W~y~Z$ donde 
+             $W=aX+b~~y~~Z=cY+d,~~~~a>0,c>0;~~~b,d~\in~\mathbb R$
+        \item Sea $(X,Y)$  un  vector aleatorio con distribución normal bivariada con densidad dada en el ejemplo 15(2.5)¿Cual es la densidad de $(W,Z)=((X−\mu_1)/\sigma_1 ,(Y−\mu_2)/\sigma_2 )$ ?¿Que distribución es esta?
+        \item Si $(X,Y)$  tiene una distribución uniforme en el circulo unitario $\{ (x,y)\in \mathbb{R}^2:x^2+y^2\leq1  \}  $
+        ¿Cual es la distribución conjunta de W y Z (definidas en el item a) 
+    \end{enumerate}
+    \\
+    \textbf{Solución:}
+    \begin{enumerate}
+        \item
+        $
+\left\lbrace\begin{array}{c}
+W=aX+b ~~~~~~ X=\frac{W-b}{a}~~~~~~a>0\\ 
+Z=cY+d ~~~~~~ Y=\frac{Z-d}{c}~~~~~~c>0
+ \end{array}\right.~~~~~~J=\begin{vmatrix}
+\frac{1}{a} & 0 \\
+ 0 & \frac{1}{c}
+\end{vmatrix}=\frac{1}{ac}$
+        $$f_{W,Z}(w,z)=\frac{1}{ac}f_{X,Y}(\frac{w-b}{a},\frac{z-d}{c})~~~~~~(w,z)\in \mathbb{R}^2
+        $$
+        \item
+         $$~~~~~~estandarizando ~~~~
+\left\lbrace\begin{array}{c}
+W=\frac{X-\mu_1}{\sigma_1} ~~~~~~ X=W\sigma_1+\mu_1~~~~~~\\ 
+Z=\frac{Y-\mu_2}{\sigma_2} ~~~~~~ Y=Z\sigma_2+\mu_2~~~~~~
+ \end{array}\right.~~~~~~J=\begin{vmatrix}
+\sigma_1 & 0 \\
+ 0 & \sigma_2
+\end{vmatrix}=\sigma_1\sigma_2$$
+        $$f_{W,Z}(w,z)=\frac{1}{2\pi\sqrt{1-\rho^2}}e^{-\frac{1}{2(1-9^2)}(x^2-2\rho wz+z^2)}~~~~~~w,z\in \mathbb{R}
+        $$
+        $\rightarrow  ~~~~~~ \therefore (W,Z)\sim \mathcal{N}_2(0,0,1,1,\rho)$
+ 
+        \item
+        $$f_{X,Y}(x,y)=\left\lbrace\begin{array}{c}
+\pi^{-1} ~~~~~~ x,y \in \{x^2+y^2\le 1\}~~~~~~\\ 
+0 ~~~~~~~~~~~~~~~~~~~~~~~~ otro ~caso~~~~~~
+ \end{array}\right. ~~~~~~J=\frac{1}{ac}$$
+        $$f_{X,Y}(x,y)=\left\lbrace\begin{array}{c}
+\pi^{-1}\frac{1}{ac} ~~~~~~ x,y \in \{x^2+y^2\le 1\}~~~~~~\\ 
+0 ~~~~~~~~~~~~~~~~~~~~~~~~ otro ~caso~~~~~~
+ \end{array}\right.
+        $$
+        
+    \end{enumerate}
+    
+\end{enumerate}
+\begin{enumerate}
+\setcounter{enumi}{59}
+    \item Suponga que $X_1,…,X_n$  son independientes e idénticamente distribuidos con densidad común f.
+       Muestre que la densidad conjunta de 
+       $$U=\min_{(1\leq i\leq n)}⁡X_i   ~~~~~~  y~~~~~~   
+       V=\max_{(1\leq i\leq n)}X_i$$
+       $$f_{U,V}(u,v)=\left\lbrace\begin{array}{c}
+n(n-1)[F(v)-F(u)]^{n-2}f(u)f(v) ~~~~~~ si~ u<v~~~~~~\\ 
+0 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ si~ u \ge v ~~~~~~
+ \end{array}\right.$$
+    (sugerencia:primero obtenga $P(u\leq U,V \leq v)$. Luego calcule la derivada de la función de 
+      distribución conjunta)
+         \\
+    \textbf{Solución:}
+    $\to ~~~ Por~formula~de~estadisticos~de~orden~distribución ~conjunta $
+    $$f_{X_{(j)},X_{(k)}}(x,y)=\frac{n!}{(j-1)!(k-j-1)!(n-k)!} \dotsb
+    $$
+    $$\dotsb [F_X(x)]^{j-1}[F_X(y)-F_X(x)]^{k-1-j}[1-F_X(y)]^{n-k}f_X(x)f_X(y))  ~~~~~~donde ~ x\le y
+    $$
+    $\to ~~~ j=1 ~siendo~ U= X_{(1)};k=n ~siendo~ V= X_{(n)}~remplazamos~ en~ la~ formula~obtenemos: $
+    $$n(n-1)[F(v)-F(u)]^{n-2}f(u)f(v)
+    $$
+    
+    \item Sea $X_1,…,X_n$  variables aleatorias independientes e idénticamente distribuidos con con distribución uniforme en $[0,\theta]$, donde $\theta>0$ sea
+    $$U=\min_{(1\leq i\leq n)}⁡X_i   ~~~~~~  y~~~~~~   
+       V=\max_{(1\leq i\leq n)}X_i$$
+       \begin{enumerate}
+            \item Probar que la densidad conjunta de $(U,V)$  es
+            $$f_{U,V}(u,v)=\left\lbrace\begin{array}{c}
+n(n-1)[v-u]^{n-2}/ \theta^n ~~~~~~ si~ 0\leq u<v \leq \theta~~~~~~\\ 
+0 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ otro ~~~~~~
+ \end{array}\right.$$
+            \item Probar que la densidad de $V - U$ esta dada por
+            $$f_W(w)=\left\lbrace\begin{array}{c}
+\frac{n(n-1)w^{n-2}}{\theta^{n-1}}(1-\frac{w}{\theta}) ~~~~~~ si~ 0\leq w \leq \theta~~~~~~\\ 
+0 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ otro ~~~~~~
+ \end{array}\right.$$
+       \end{enumerate}
+   \\
+    \textbf{Solución:}
+       \begin{enumerate}
+            \item 
+            $$F_U(u)=\frac{u}{\theta} ~~~~~~F_V(v)=\frac{v}{\theta}~~~~ replazamos~en~la ~ecuación~del~ problema ~60~ obteniendo:$$
+            $$n(n-1)[v-u]^{n-2}/ \theta^n
+            $$
+            \item transformando $W=V-U$ obtenemos:
+            $$\frac{n(n-1)w^{n-2}}{\theta^{n-1}}(1-\frac{w}{\theta}) 
+            $$
+       \end{enumerate}
+       
+    \item Si $X_1,…,X_n$  son independientes con distribución común $U[0,1]$, demuestre que 
+    $$−2nlogY ~ X^2 (2n)$$
+    $donde~Y~es~la~media~geométrica~de~X_i~definida~por~Y=(\prod_{i=1}^{n}X_i)^{1/n}$
+    
+       \\
+    \textbf{Solución:}\\
+    $$Z=-2nlogY$$
+    $x_1,...,X_n~son~indep~ entonces~ -logX_1,...,-logX_n ~tambien ~son~ indep~ siendo~ y_1,...,y_n$
+    $$P(Y_i\le y_i)=P(-logx_i\le y_i)=1-F(e^{-y_i})=1-e^{-y_i} \to y_i\sim Gamma(1,1)\sim Exp(1)$$
+    $$f_Z(z)=\left\lbrace\begin{array}{c}
+\frac{(\frac{1}{2})^n}{\Gamma(n)}z^{n-1} e^{-\frac{1}{2}z}~~~~~~ z\leq 0~~~~~~\\ 
+0 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ otro ~~~~~~
+ \end{array}\right.
+    $$
+    $$
+    Z\sim X_{2n}^2\to Z=2W=-2\sum_{i=1}^{n}logX_i=-2log\prod_{i=1}^{n}X_i=-2nlogY
+    $$
+    $$−2nlogY ~ X^2 (2n)$$
+       
+\end{enumerate}
+
+\newpage

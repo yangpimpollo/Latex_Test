@@ -1,0 +1,46 @@
+\begin{enumerate}
+\setcounter{enumi}{38}
+     \item .
+     \begin{enumerate}
+        \item Sean $X~e~Y$  independientes con la distribución de Poisson con sus respectivos parámetros $\lambda_1~e~\lambda_2$. Demuestre que $X+Y\thicksim Poisson(\lambda_1+ \lambda_2)$.
+        \item Demuestre que si $X_1,…,X_n$  son independientes tales que $X_i\thicksimPoisson(\lambda_i ),~i=1,…,n$ entonces $X_1+…+X_n\thicksim Poisson(\lambda_1+…+\lambda_n )$.
+    \end{enumerate}
+    \\
+    \textbf{Solución:}
+    \begin{enumerate}
+       \item $P(X=i)=f_X(i)~~~;~~~P(Y=z-i)=f_Y(z-i)~~~;~~~P(X+Y=z)=f_{X+Y}(z)$
+       $$\rightarrow \sum_{i=1}^{z}P_X(i)P_Y(z-i)=\sum_{i=1}^{z}\frac{\lambda_1^ie^{-\lambda_1}}{i!}*\frac{\lambda_2^{z-i}e^{-\lambda_2}}{(z-i)!})~~~;~~~z=0,1,2...
+       $$
+       $$\rightarrow \frac{e^{-(\lambda_1+\lambda_2)}}{z!}\sum_{i=1}^{z}\binom{z}{i}\lambda_1^i\lambda_2^{z-i}=\frac{e^{-(\lambda_1+\lambda_2)}}{z!}}(\lambda_1 +\lambda_2)^z~~~;~~~X+Y\thicksim Poisson(\lambda_1+\lambda_2 )
+       $$
+       
+       \item Generalizando el item 'a' por inducción tenemos $X_1+…+X_n\thicksim Poisson(\lambda_1+…+\lambda_n )$.
+    \end{enumerate}
+    
+    \item Cierto supermercado tiene 2 entradas A y B. Los clientes entran por la entrada A de acuerdo con un proceso Poisson con una tasa promedio de 15 clientes por minuto. A travez de la entrada B, los clientes ingresan de acuerdo con otro Poisson, independiente del primero, a una tasa promedio de 10 por minuto.
+    \begin{enumerate}
+       \item Sea $X_t$  el número total de clientes que ingresaron al supermercado hasta el momento t(inclusivo), para $t\geq 0$. entonces ${X_t  :t \geq 0}$ tambien es un proceso Poisson(no es necesario demostrarlo).  ¿Cual es el parámetro de este proceso?Justifique su respuesta.
+       
+       \item Sea $T_1$  el momento en que el primer cliente ingresa a través de la entrada A, siendo $V_1$  el 
+      momento en que el primer cliente ingresa a través de B. Encuentre la distribución de $min(T_1,V_1)$ el minimo de los dos tiempos.
+      
+       \item Determinar la probabilidad de que el primer cliente que ingrese al merccado ingrese por A
+       
+    \end{enumerate}
+    \\
+    \textbf{Solución:}
+    \begin{enumerate}
+        \item $X$ número de clientes que entran por A $~~~~~~~~~\lambda_1=15$\\
+              $~Y$ número de clientes que entran por B $~~~~~~~~~\lambda_2=10$\\
+              $$ X \perp Y~~~~~~~~~~~X \thicksim Pois(\lambda_1)~~~~Y \thicksim Pois(\lambda_2)$$
+              $$~~~~~~Z_t=X+Y~~~~~~\to~~~~~~ Z_t \thicksim Pois(\lambda_1 +\lambda_2)~~~~~~demostrado~en~el problema~39
+              $$
+        \item 
+        $$~~~~~~T_1 \thicksim Exp(\lambda_1)~~~~~~V_1 \thicksim Exp(\lambda_2)$$ Por la Distribución del mínimo de variables aleatorias exponenciales
+        $$F_{min(T_1,V_1)}(x)=P(T_1>x,V_1>x)=\prod_{i=1}^{n}P(X_i>x)=exp(-x(\lambda_1+\lambda_2))$$
+        \item 
+        $$P(T_1\le V_1)=\int_{0}^{\infty }\int_{t_1}^{\infty }\lambda_1 exp(-\lambda_1 t_1)\lambda_2 exp(-\lambda_2 v_1).dv_1dt_1=\frac{\lambda_1}{\lambda_1 + \lambda_2}=\frac{15}{25}=0.6$$
+    \end{enumerate}
+    
+\end{enumerate}
+\newpage
